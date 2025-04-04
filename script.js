@@ -8,6 +8,12 @@ const MIN_CHOICE = 1;
 const MAX_CHOICE = 4;
 
 
+// Main()
+
+let computerChoice = getComputerChoice();
+// console.log(computerChoice);
+
+
 
 function getRandomInt(min, max) {
     const minCeiled = Math.ceil(min);
