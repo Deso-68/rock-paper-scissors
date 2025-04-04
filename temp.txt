@@ -1,30 +1,6 @@
-console.log("Hello, world");
 
-
-
-// Keep track of the player and computer score
-let humanScore = 0
-let computerScore = 0
-
-// Prompt the user for their move (rock, paper, scissor)
-let humanChoice = getHumanChoice();
-
-
-// functions 
 function playRound(humanChoice, computerChoice) {
     return
 }
 
-function getcomputerChoice() {
-    randomInt = getRandomInt(1, 4);
-    if(randomInt === 1) {
-        return 
-    }
-    
-    return;
-}
 
-    
-function getHumanChoice() {
-    return prompt("Rock, Paper, Scissors")
-}

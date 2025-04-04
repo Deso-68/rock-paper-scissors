@@ -19,8 +19,36 @@ let computerChoice = getComputerChoice();
 
 // Prompt the user for their move
 let humanChoice = getHumanChoice();
-console.log(humanChoice);
+// console.log(humanChoice);
 
+playRound(humanChoice, computerChoice);
+console.log("humanChoice: ",humanChoice, "  human: ", humanScore);
+console.log("computerChoice: ",computerChoice, "  computer: ",computerScore);
+
+function playRound(humanChoice, computerChoice) {
+    if(humanChoice === ROCK && computerChoice === SCISSORS) {
+        humanScore++;
+        return  
+    }
+    else if(humanChoice === PAPER && computerChoice === ROCK) {
+        humanScore++;
+        return 
+    }
+    else if(humanChoice === SCISSORS && computerChoice === PAPER) {
+        humanScore++;
+        return;
+    }
+    // both sides win if tie?
+    else if(humanChoice === computerChoice) {
+        ++computerScore;
+        ++humanScore;
+        return;
+    }
+    else {
+        computerScore++;
+        return; 
+    }
+}
 
 function getHumanChoice() {
     let userChoice = prompt("Choose your move:\nrock, paper, or scissors");
