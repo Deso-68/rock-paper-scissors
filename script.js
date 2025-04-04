@@ -7,6 +7,10 @@ const SCISSORS = "scissors";
 const MIN_CHOICE = 1;
 const MAX_CHOICE = 4;
 
+// Keep track of the player and computer score
+let humanScore = 0
+let computerScore = 0
+
 
 // Main()
 
