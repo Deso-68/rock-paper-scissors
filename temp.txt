@@ -10,13 +10,6 @@ let computerScore = 0
 let humanChoice = getHumanChoice();
 
 
-// console.log(humanChoice);
-// console.log(getRandomInt(1, 4));
-
-let computerChoice = getcomputerChoice();
-// console.log(computerChoice);
-
-
 // functions 
 function playRound(humanChoice, computerChoice) {
     return
@@ -31,11 +24,6 @@ function getcomputerChoice() {
     return;
 }
 
-function getRandomInt(min, max) {
-    const minCeiled = Math.ceil(min);
-    const maxFloored = Math.floor(max);
-    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
-}
     
 function getHumanChoice() {
     return prompt("Rock, Paper, Scissors")

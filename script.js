@@ -13,7 +13,13 @@ const MAX_CHOICE = 4;
 let computerChoice = getComputerChoice();
 // console.log(computerChoice);
 
+let humanChoice = getHumanChoice();
+// console.log(humanChoice);
 
+    
+function getHumanChoice() {
+    return prompt("Choose your move:\nrock, paper, or scissors");
+}
 
 function getRandomInt(min, max) {
     const minCeiled = Math.ceil(min);
