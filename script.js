@@ -57,7 +57,7 @@ function getRandomInt(min, max) {
 }
 
 function getComputerChoice() {
-    randomInt = getRandomInt(MIN_CHOICE, MAX_CHOICE);
+    let randomInt = getRandomInt(MIN_CHOICE, MAX_CHOICE);
     // console.log(randomInt);
 
     if(randomInt === 1) {
