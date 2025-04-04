@@ -1,6 +1,0 @@
-
-function playRound(humanChoice, computerChoice) {
-    return
-}
-
-
