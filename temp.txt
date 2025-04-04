@@ -1,0 +1,42 @@
+console.log("Hello, world");
+
+
+
+// Keep track of the player and computer score
+let humanScore = 0
+let computerScore = 0
+
+// Prompt the user for their move (rock, paper, scissor)
+let humanChoice = getHumanChoice();
+
+
+// console.log(humanChoice);
+// console.log(getRandomInt(1, 4));
+
+let computerChoice = getcomputerChoice();
+// console.log(computerChoice);
+
+
+// functions 
+function playRound(humanChoice, computerChoice) {
+    return
+}
+
+function getcomputerChoice() {
+    randomInt = getRandomInt(1, 4);
+    if(randomInt === 1) {
+        return 
+    }
+    
+    return;
+}
+
+function getRandomInt(min, max) {
+    const minCeiled = Math.ceil(min);
+    const maxFloored = Math.floor(max);
+    return Math.floor(Math.random() * (maxFloored - minCeiled) + minCeiled); // The maximum is exclusive and the minimum is inclusive
+}
+    
+function getHumanChoice() {
+    return prompt("Rock, Paper, Scissors")
+}
