@@ -17,12 +17,37 @@ let computerScore = 0
 let computerChoice = getComputerChoice();
 // console.log(computerChoice);
 
+// Prompt the user for their move
 let humanChoice = getHumanChoice();
-// console.log(humanChoice);
+console.log(humanChoice);
 
-    
+
 function getHumanChoice() {
-    return prompt("Choose your move:\nrock, paper, or scissors");
+    let userChoice = prompt("Choose your move:\nrock, paper, or scissors");
+    
+    // checks if user clicks cancel button which makes the variable null
+    if(userChoice === null) {
+        alert("You clicked cancel");
+        return getHumanChoice();
+    }
+
+    // turns the string into lowercase
+    userChoice = userChoice.toLowerCase();
+
+    // validate if user input is valid
+    switch (userChoice) {
+        case ROCK:
+            return ROCK;
+        case PAPER:
+            return PAPER;
+        case SCISSORS:
+            return SCISSORS;
+        default:
+            alert("Invalid Input");
+
+             // call the function again if invalid input
+            return getHumanChoice(); 
+    }  
 }
 
 function getRandomInt(min, max) {
