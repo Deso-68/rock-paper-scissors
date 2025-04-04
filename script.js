@@ -7,23 +7,31 @@ const SCISSORS = "scissors";
 const MIN_CHOICE = 1;
 const MAX_CHOICE = 4;
 
+// Number of Rounds
+const ROUNDS = 5;
+
 // Keep track of the player and computer score
 let humanScore = 0
 let computerScore = 0
 
 
 // Main()
+mainGame();
 
-let computerChoice = getComputerChoice();
-// console.log(computerChoice);
 
-// Prompt the user for their move
-let humanChoice = getHumanChoice();
-// console.log(humanChoice);
+function mainGame() {
+    for (let i = 0; i < ROUNDS; i++) {
+        let computerChoice = getComputerChoice();
 
-playRound(humanChoice, computerChoice);
-console.log("humanChoice: ",humanChoice, "  human: ", humanScore);
-console.log("computerChoice: ",computerChoice, "  computer: ",computerScore);
+        // Prompt the user for their move
+        let humanChoice = getHumanChoice();
+
+        playRound(humanChoice, computerChoice);
+        console.log("humanChoice: ",humanChoice, "  human: ", humanScore);
+        console.log("computerChoice: ",computerChoice, "  computer: ",computerScore);
+        console.log("");        
+    }
+}
 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === ROCK && computerChoice === SCISSORS) {
