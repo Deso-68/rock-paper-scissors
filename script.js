@@ -26,10 +26,7 @@ function mainGame() {
         // Prompt the user for their move
         let humanChoice = getHumanChoice();
 
-        playRound(humanChoice, computerChoice);
-        console.log("humanChoice: ",humanChoice, "  human: ", humanScore);
-        console.log("computerChoice: ",computerChoice, "  computer: ",computerScore);
-        console.log("");        
+        playRound(humanChoice, computerChoice);       
     }
 }
 
