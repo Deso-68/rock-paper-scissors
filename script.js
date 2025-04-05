@@ -35,34 +35,35 @@ function mainGame() {
 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === ROCK && computerChoice === SCISSORS) {
-        
+        logChoice(humanChoice, computerChoice);
         humanScore++;
         return  
     }
     else if(humanChoice === PAPER && computerChoice === ROCK) {
-        
+        logChoice(humanChoice, computerChoice);
         humanScore++;
         return 
     }
     else if(humanChoice === SCISSORS && computerChoice === PAPER) {
-        
+        logChoice(humanChoice, computerChoice);
         humanScore++;
         return;
     }
     // both sides gain no points when tied
     else if(humanChoice === computerChoice) {
-        
+        console.log("It's a tie");
         return;
     }
     else {
-        
+        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
         computerScore++;
         return; 
     }
 }
 
 function logChoice(humanChoice, computerChoice) {
-    return console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+    return; 
 }
 
 function getHumanChoice() {
