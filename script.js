@@ -46,10 +46,8 @@ function playRound(humanChoice, computerChoice) {
         humanScore++;
         return;
     }
-    // both sides win if tie?
+    // both sides gain no points when tie 
     else if(humanChoice === computerChoice) {
-        ++computerScore;
-        ++humanScore;
         return;
     }
     else {
