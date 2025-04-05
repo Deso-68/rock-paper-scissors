@@ -18,6 +18,7 @@ let computerScore = 0
 // Main()
 mainGame();
 
+selectWinnerByScore(humanScore, computerScore);
 
 function mainGame() {
     for (let i = 0; i < ROUNDS; i++) {
@@ -56,6 +57,12 @@ function playRound(humanChoice, computerChoice) {
         computerScore++;
         return; 
     }
+}
+
+function selectWinnerByScore(humanScore, computerScore) {
+    if(humanScore > computerScore) return console.log("You win the game!");
+    else if(humanScore < computerScore) return console.log("You lose the game!");
+    else return console.log("It's a draw!")
 }
 
 function logChoice(humanChoice, computerChoice) {
