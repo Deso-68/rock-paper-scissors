@@ -48,7 +48,7 @@ function playRound(humanChoice, computerChoice) {
     }
     // both sides gain no points when tied
     else if(humanChoice === computerChoice) {
-        console.log("It's a tie");
+        console.log(`It's a tie ${computerChoice} vs. ${humanChoice}`);
         return;
     }
     else {
