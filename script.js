@@ -20,11 +20,7 @@ let computerScore = 0
 // What to do 
 
 // Main()
-
-
-mainGame();
-
-selectWinnerByScore(humanScore, computerScore);
+startGame();
 
 function mainGame(choice) {
     for (let i = 0; i < ROUNDS; i++) {
@@ -35,6 +31,7 @@ function mainGame(choice) {
 
         playRound(humanChoice, computerChoice);       
     }
+    selectWinnerByScore(humanScore, computerScore);
 }
 
 function playRound(humanChoice, computerChoice) {
