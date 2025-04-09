@@ -14,6 +14,7 @@ const ROUNDS = 1;
 let humanScore = 0
 let computerScore = 0
 
+// What to do 
 
 // Main()
 mainGame();
