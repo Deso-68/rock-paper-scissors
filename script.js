@@ -17,7 +17,6 @@ const ROUNDS = 1;
 let humanScore = 0
 let computerScore = 0
 
-// What to do 
 
 // Main()
 startGame();
@@ -72,11 +71,6 @@ function selectWinnerByScore(humanScore, computerScore) {
     if(humanScore > computerScore) return console.log("You win the game!");
     else if(humanScore < computerScore) return console.log("You lose the game!");
     else return console.log("It's a draw!")
-}
-
-function logChoice(humanChoice, computerChoice) {
-    console.log(`You win! ${humanChoice} beats ${computerChoice}`);
-    return; 
 }
 
 function getRandomInt(min, max) {
