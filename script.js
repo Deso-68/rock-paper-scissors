@@ -31,6 +31,7 @@ function mainGame(choice) {
         playRound(humanChoice, computerChoice);       
     }
     selectWinnerByScore(humanScore, computerScore);
+    resetScore();
 }
 
 function resetScore() {
