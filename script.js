@@ -2,6 +2,9 @@
 const ROCK = "rock"; 
 const PAPER = "paper";
 const SCISSORS = "scissors";
+const rockChoice = document.querySelector(".btn-rock");
+const paperChoice = document.querySelector(".btn-paper");
+const scissorsChoice = document.querySelector(".btn-scissors");
 
 // For getComputerChoice min and max value
 const MIN_CHOICE = 1;
@@ -17,6 +20,8 @@ let computerScore = 0
 // What to do 
 
 // Main()
+
+
 mainGame();
 
 selectWinnerByScore(humanScore, computerScore);
@@ -60,6 +65,10 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
+const startGame = () => {
+    
+}
+
 function selectWinnerByScore(humanScore, computerScore) {
     if(humanScore > computerScore) return console.log("You win the game!");
     else if(humanScore < computerScore) return console.log("You lose the game!");
@@ -70,8 +79,6 @@ function logChoice(humanChoice, computerChoice) {
     console.log(`You win! ${humanChoice} beats ${computerChoice}`);
     return; 
 }
-
-
 
 function getRandomInt(min, max) {
     const minCeiled = Math.ceil(min);
