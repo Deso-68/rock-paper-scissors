@@ -26,7 +26,7 @@ mainGame();
 
 selectWinnerByScore(humanScore, computerScore);
 
-function mainGame() {
+function mainGame(choice) {
     for (let i = 0; i < ROUNDS; i++) {
         let computerChoice = getComputerChoice();
 
@@ -66,7 +66,9 @@ function playRound(humanChoice, computerChoice) {
 }
 
 const startGame = () => {
-    
+    rockChoice.addEventListener("click", mainGame(choice));
+    paperChoice.addEventListener("click", mainGame(choice));
+    scissorsChoice.addEventListener("click", mainGame(choice));
 }
 
 function selectWinnerByScore(humanScore, computerScore) {
