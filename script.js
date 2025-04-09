@@ -27,7 +27,7 @@ function mainGame(choice) {
         let computerChoice = getComputerChoice();
 
         // Prompt the user for their move
-        let humanChoice = getHumanChoice();
+        let humanChoice = choice;
 
         playRound(humanChoice, computerChoice);       
     }
@@ -62,7 +62,7 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const startGame = () => {
+function startGame() {
     rockChoice.addEventListener("click", () => mainGame(ROCK));
     paperChoice.addEventListener("click", () => mainGame(PAPER));
     scissorsChoice.addEventListener("click", () => mainGame(SCISSORS));
