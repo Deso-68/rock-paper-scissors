@@ -33,6 +33,11 @@ function mainGame(choice) {
     selectWinnerByScore(humanScore, computerScore);
 }
 
+function resetScore() {
+    humanScore = 0;
+    computerScore = 0;
+}
+
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === ROCK && computerChoice === SCISSORS) {
         humanScore++;
