@@ -8,7 +8,7 @@ const MIN_CHOICE = 1;
 const MAX_CHOICE = 4;
 
 // Number of Rounds
-const ROUNDS = 5;
+const ROUNDS = 1;
 
 // Keep track of the player and computer score
 let humanScore = 0
