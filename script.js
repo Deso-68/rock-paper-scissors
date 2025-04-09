@@ -66,9 +66,9 @@ function playRound(humanChoice, computerChoice) {
 }
 
 const startGame = () => {
-    rockChoice.addEventListener("click", mainGame(choice));
-    paperChoice.addEventListener("click", mainGame(choice));
-    scissorsChoice.addEventListener("click", mainGame(choice));
+    rockChoice.addEventListener("click", () => mainGame(ROCK));
+    paperChoice.addEventListener("click", () => mainGame(PAPER));
+    scissorsChoice.addEventListener("click", () => mainGame(SCISSORS));
 }
 
 function selectWinnerByScore(humanScore, computerScore) {
