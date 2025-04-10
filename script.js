@@ -61,7 +61,7 @@ function roundResult(outcome) {
 function removeRoundResultElement() {
     setTimeout( () => {
         roundResultContainer.removeChild(resultInfo);
-    }, 600)
+    }, 800)
 }
 
 function resetScore() {
