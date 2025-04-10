@@ -12,6 +12,7 @@ body {
     display: flex;
     justify-content: center;
     width: 100%;
+    font-size: 5vw;
 }
 
 .rps-container {
@@ -40,8 +41,9 @@ button img, h1{
     flex-direction: column;
 }
 
-.score-container {
-    font-weight: 500;
+.score-container,
+.round-result-container {
+    font-size: 6vw;
 }
 
 .result-info {
@@ -51,4 +53,5 @@ button img, h1{
     padding: 1rem;
     border-radius: 1rem;
     font-weight: 500;
+    margin: 3vw;
   }
