@@ -58,6 +58,12 @@ function roundResult(outcome) {
     }
 }
 
+function removeRoundResultElement() {
+    setTimeout( () => {
+        roundResultContainer.removeChild(resultInfo);
+    }, 600)
+}
+
 function resetScore() {
     if (humanScore === 5 || computerScore === 5) {
         humanScore = 0;
