@@ -34,35 +34,43 @@ function mainGame(choice) {
 }
 
 function roundResult(outcome) {
+    rounds++;
     if(outcome === "win") {
-        let resultInfo = document.createElement("p");
-        resultInfo.classList.add("result-info");
-        resultInfo.textContent = "You win this round!";
-        resultInfo.style.backgroundColor = PASTEL_GREEN;
-      
-        roundResultContainer.prepend(resultInfo);
+        winNode();
     }
     else if(outcome === "lost") {
-        let resultInfo = document.createElement("p");
-        resultInfo.classList.add("result-info");
-        resultInfo.textContent = "You lost this round!";
-        resultInfo.style.backgroundColor = PASTEL_RED;
-      
-        roundResultContainer.prepend(resultInfo);
+        lostNode();
     }
     else {
-        let resultInfo = document.createElement("p");
-        resultInfo.classList.add("result-info");
-        resultInfo.textContent = "This round is a tie!";
-        resultInfo.style.backgroundColor = PASTEL_YELLOW;
-      
-        roundResultContainer.prepend(resultInfo);
+        tieNode();
     }
 }
 
-function newNode() {
-    const resultInfo = document.createElement("p");
+function winNode() {
+    let resultInfo = document.createElement("p");
     resultInfo.classList.add("result-info");
+    resultInfo.textContent = `Round ${rounds}: You win this round!`;
+    resultInfo.style.backgroundColor = PASTEL_GREEN;
+    
+    roundResultContainer.prepend(resultInfo);
+}
+
+function lostNode() {
+    let resultInfo = document.createElement("p");
+    resultInfo.classList.add("result-info");
+    resultInfo.textContent = `Round ${rounds}: You lost this round!`;
+    resultInfo.style.backgroundColor = PASTEL_RED;
+    
+    roundResultContainer.prepend(resultInfo);
+}
+
+function tieNode() {
+    let resultInfo = document.createElement("p");
+    resultInfo.classList.add("result-info");
+    resultInfo.textContent = `Round ${rounds}: This round is tie!`;
+    resultInfo.style.backgroundColor = PASTEL_YELLOW;
+    
+    roundResultContainer.prepend(resultInfo);
 }
 
 function resetScore() {
