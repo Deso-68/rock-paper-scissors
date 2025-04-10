@@ -76,9 +76,8 @@ function startGame() {
 }
 
 function selectWinnerByScore(humanScore, computerScore) {
-    if(humanScore > computerScore) return console.log("You win the game!");
-    else if(humanScore < computerScore) return console.log("You lose the game!");
-    else return console.log("It's a draw!")
+    if(humanScore === 5) return console.log("You win the game!");
+    else if(computerScore === 5) return console.log("You lose the game!");
 }
 
 function getRandomInt(min, max) {
