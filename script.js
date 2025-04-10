@@ -9,6 +9,9 @@ const scissorsChoice = document.querySelector(".btn-scissors");
 const MIN_CHOICE = 1;
 const MAX_CHOICE = 4;
 
+const roundResultContainer = document.querySelector(".round-result-container");
+const resultInfo = document.createElement("p");
+
 
 // Keep track of the player and computer score
 let humanScore = 0
@@ -29,10 +32,10 @@ function mainGame(choice) {
 }
 
 function roundResult(outcome) {
-    if(outcome === win) {
+    if(outcome === "win") {
 
     }
-    else if(outcome === lost) {
+    else if(outcome === "lost") {
 
     }
     else {
