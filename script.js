@@ -15,12 +15,11 @@ const MAX_CHOICE = 4;
 
 const roundResultContainer = document.querySelector(".round-result-container");
 
-const resultInfo = document.createElement("p");
-resultInfo.classList.add("result-info");
 
 // Main()
-let humanScore = 0
-let computerScore = 0
+let rounds = 0;
+let humanScore = 0;
+let computerScore = 0;
 
 startGame();
 
@@ -36,23 +35,34 @@ function mainGame(choice) {
 
 function roundResult(outcome) {
     if(outcome === "win") {
+        let resultInfo = document.createElement("p");
+        resultInfo.classList.add("result-info");
         resultInfo.textContent = "You win this round!";
         resultInfo.style.backgroundColor = PASTEL_GREEN;
       
-        roundResultContainer.appendChild(resultInfo);
+        roundResultContainer.prepend(resultInfo);
     }
     else if(outcome === "lost") {
+        let resultInfo = document.createElement("p");
+        resultInfo.classList.add("result-info");
         resultInfo.textContent = "You lost this round!";
         resultInfo.style.backgroundColor = PASTEL_RED;
       
-        roundResultContainer.appendChild(resultInfo);
+        roundResultContainer.prepend(resultInfo);
     }
     else {
+        let resultInfo = document.createElement("p");
+        resultInfo.classList.add("result-info");
         resultInfo.textContent = "This round is a tie!";
         resultInfo.style.backgroundColor = PASTEL_YELLOW;
       
-        roundResultContainer.appendChild(resultInfo);
+        roundResultContainer.prepend(resultInfo);
     }
+}
+
+function newNode() {
+    const resultInfo = document.createElement("p");
+    resultInfo.classList.add("result-info");
 }
 
 function resetScore() {
