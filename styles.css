@@ -3,19 +3,20 @@ body {
     justify-content: center;
     text-align: center;
     flex-direction: column;
-    padding: 3vw;
+    padding: 2vw;
 }
 
 .heading {
     display: flex;
     justify-content: center;
+    width: 80%;
 }
 
 .rps-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 3vw;
     width: 80%;
 }
 
