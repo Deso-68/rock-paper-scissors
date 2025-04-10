@@ -9,7 +9,7 @@ body {
 .heading {
     display: flex;
     justify-content: center;
-    width: 80%;
+    width: 100%;
 }
 
 .rps-container {
@@ -17,7 +17,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 3vw;
-    width: 80%;
+    width: 100%;
 }
 
 button img, h1{
