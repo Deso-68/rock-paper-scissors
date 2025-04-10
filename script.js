@@ -1,14 +1,14 @@
-// Rock, Paper, Scissors constant variables
 const ROCK = "rock"; 
 const PAPER = "paper";
 const SCISSORS = "scissors";
+
 const rockChoice = document.querySelector(".btn-rock");
 const paperChoice = document.querySelector(".btn-paper");
 const scissorsChoice = document.querySelector(".btn-scissors");
 
-// For getComputerChoice min and max value
 const MIN_CHOICE = 1;
 const MAX_CHOICE = 4;
+
 
 // Keep track of the player and computer score
 let humanScore = 0
@@ -26,6 +26,18 @@ function mainGame(choice) {
     displayScore();
     selectWinnerByScore(humanScore, computerScore);
     resetScore(); 
+}
+
+function roundResult(outcome) {
+    if(outcome === win) {
+
+    }
+    else if(outcome === lost) {
+
+    }
+    else {
+
+    }
 }
 
 function resetScore() {
