@@ -39,8 +39,8 @@ function resetScore() {
 }
 
 function displayScore() {
-    const displayHumanScore = document.querySelector(".human-score");
-    const displayComputerScore = document.querySelector(".computer-score");
+    const displayHumanScore = document.querySelector(".human-score-item");
+    const displayComputerScore = document.querySelector(".computer-score-item");
 
     displayHumanScore.textContent = `${humanScore}`;
     displayComputerScore.textContent = `${computerScore}`;
@@ -76,8 +76,15 @@ function startGame() {
 }
 
 function selectWinnerByScore(humanScore, computerScore) {
-    if(humanScore === 5) return console.log("You win the game!");
-    else if(computerScore === 5) return console.log("You lose the game!");
+    if(humanScore === 5) {
+        document.body.style.backgroundColor = "green";
+        alert("You won the match");
+    }
+    else if(computerScore === 5) {
+        document.body.style.backgroundColor = "red";
+        alert("You lost the match");
+        window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
+    }
 }
 
 function getRandomInt(min, max) {
