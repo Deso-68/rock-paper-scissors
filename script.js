@@ -10,9 +10,6 @@ const scissorsChoice = document.querySelector(".btn-scissors");
 const MIN_CHOICE = 1;
 const MAX_CHOICE = 4;
 
-// Number of Rounds
-const ROUNDS = 1;
-
 // Keep track of the player and computer score
 let humanScore = 0
 let computerScore = 0
@@ -22,21 +19,31 @@ let computerScore = 0
 startGame();
 
 function mainGame(choice) {
-    for (let i = 0; i < ROUNDS; i++) {
-        let computerChoice = getComputerChoice();
+    let computerChoice = getComputerChoice();
 
-        // Prompt the user for their move
-        let humanChoice = choice;
+    // Prompt the user for their move
+    let humanChoice = choice;
 
-        playRound(humanChoice, computerChoice);       
-    }
+    playRound(humanChoice, computerChoice);    
+      
+    displayScore();
     selectWinnerByScore(humanScore, computerScore);
-    resetScore();
+    resetScore(); 
 }
 
 function resetScore() {
-    humanScore = 0;
-    computerScore = 0;
+    if (humanScore === 5 || computerScore === 5) {
+        humanScore = 0;
+        computerScore = 0;
+    }
+}
+
+function displayScore() {
+    const displayHumanScore = document.querySelector(".human-score");
+    const displayComputerScore = document.querySelector(".computer-score");
+
+    displayHumanScore.textContent = `${humanScore}`;
+    displayComputerScore.textContent = `${computerScore}`;
 }
 
 function playRound(humanChoice, computerChoice) {
