@@ -2,15 +2,21 @@ const ROCK = "rock";
 const PAPER = "paper";
 const SCISSORS = "scissors";
 
-const rockChoice = document.querySelector(".btn-rock");
-const paperChoice = document.querySelector(".btn-paper");
-const scissorsChoice = document.querySelector(".btn-scissors");
+const ROCK_CHOICE = document.querySelector(".btn-rock");
+const PAPER_CHOICE = document.querySelector(".btn-paper");
+const SCISSOR_SCHOICE = document.querySelector(".btn-scissors");
+
+const PASTEL_GREEN = "#A8E6CF";
+const PASTEL_RED = "#F4CCCC";
+const PASTEL_YELLOW = "#FFF9A5";
 
 const MIN_CHOICE = 1;
 const MAX_CHOICE = 4;
 
 const roundResultContainer = document.querySelector(".round-result-container");
+
 const resultInfo = document.createElement("p");
+resultInfo.classList.add("result-info");
 
 
 // Keep track of the player and computer score
@@ -33,13 +39,22 @@ function mainGame(choice) {
 
 function roundResult(outcome) {
     if(outcome === "win") {
-
+        resultInfo.textContent = "You win this round!";
+        resultInfo.style.backgroundColor = PASTEL_GREEN;
+      
+        roundResultContainer.appendChild(resultInfo);
     }
     else if(outcome === "lost") {
-
+        resultInfo.textContent = "You lost this round!";
+        resultInfo.style.backgroundColor = PASTEL_RED;
+      
+        roundResultContainer.appendChild(resultInfo);
     }
     else {
-
+        resultInfo.textContent = "This round is a tie!";
+        resultInfo.style.backgroundColor = PASTEL_YELLOW;
+      
+        roundResultContainer.appendChild(resultInfo);
     }
 }
 
@@ -60,40 +75,45 @@ function displayScore() {
 
 function playRound(humanChoice, computerChoice) {
     if(humanChoice === ROCK && computerChoice === SCISSORS) {
+        roundResult("win");
         humanScore++;
         return  
     }
     else if(humanChoice === PAPER && computerChoice === ROCK) {
+        roundResult("win");
         humanScore++;
         return 
     }
     else if(humanChoice === SCISSORS && computerChoice === PAPER) {
+        roundResult("win");
         humanScore++;
         return;
     }
     // both sides gain no points when tied
     else if(humanChoice === computerChoice) {
+        roundResult();
         return;
     }
     else {
+        roundResult("lost");
         computerScore++;
         return; 
     }
 }
 
 function startGame() {
-    rockChoice.addEventListener("click", () => mainGame(ROCK));
-    paperChoice.addEventListener("click", () => mainGame(PAPER));
-    scissorsChoice.addEventListener("click", () => mainGame(SCISSORS));
+    ROCK_CHOICE.addEventListener("click", () => mainGame(ROCK));
+    PAPER_CHOICE.addEventListener("click", () => mainGame(PAPER));
+    SCISSOR_SCHOICE.addEventListener("click", () => mainGame(SCISSORS));
 }
 
 function selectWinnerByScore(humanScore, computerScore) {
     if(humanScore === 5) {
-        document.body.style.backgroundColor = "green";
+        document.body.style.backgroundColor = PASTEL_GREEN;
         alert("You won the match");
     }
     else if(computerScore === 5) {
-        document.body.style.backgroundColor = "red";
+        document.body.style.backgroundColor = PASTEL_RED;
         alert("You lost the match");
         window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
     }

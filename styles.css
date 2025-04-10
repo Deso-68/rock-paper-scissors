@@ -24,3 +24,19 @@ button img, h1{
    max-width: 100%;
    height: auto;
 }
+
+.round-result-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.result-info {
+    display: flex;
+    justify-content: center;
+    max-width: 70%;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 500;
+  }
