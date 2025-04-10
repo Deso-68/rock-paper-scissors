@@ -4,6 +4,7 @@ body {
     text-align: center;
     flex-direction: column;
     padding: 2vw;
+    background-color: #E6E6FA;
 }
 
 .heading {
