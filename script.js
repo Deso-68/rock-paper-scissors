@@ -108,6 +108,7 @@ function selectWinnerByScore(humanScore, computerScore) {
     if(humanScore === 5) {
         document.body.style.backgroundColor = PASTEL_GREEN;
         alert("You won the match");
+        window.location.href = "https://media1.tenor.com/m/qcLd8VXvY-AAAAAC/happy-cat-cat.gif"
     }
     else if(computerScore === 5) {
         document.body.style.backgroundColor = PASTEL_RED;
