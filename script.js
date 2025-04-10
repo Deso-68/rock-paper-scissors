@@ -40,28 +40,19 @@ function roundResult(outcome) {
         resultInfo.style.backgroundColor = PASTEL_GREEN;
       
         roundResultContainer.appendChild(resultInfo);
-        removeRoundResultElement()
     }
     else if(outcome === "lost") {
         resultInfo.textContent = "You lost this round!";
         resultInfo.style.backgroundColor = PASTEL_RED;
       
         roundResultContainer.appendChild(resultInfo);
-        removeRoundResultElement()
     }
     else {
         resultInfo.textContent = "This round is a tie!";
         resultInfo.style.backgroundColor = PASTEL_YELLOW;
       
         roundResultContainer.appendChild(resultInfo);
-        removeRoundResultElement()
     }
-}
-
-function removeRoundResultElement() {
-    setTimeout( () => {
-        roundResultContainer.removeChild(resultInfo);
-    }, 800)
 }
 
 function resetScore() {
