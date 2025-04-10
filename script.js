@@ -21,11 +21,8 @@ startGame();
 function mainGame(choice) {
     let computerChoice = getComputerChoice();
 
-    // Prompt the user for their move
-    let humanChoice = choice;
+    playRound(choice, computerChoice);    
 
-    playRound(humanChoice, computerChoice);    
-      
     displayScore();
     selectWinnerByScore(humanScore, computerScore);
     resetScore(); 
