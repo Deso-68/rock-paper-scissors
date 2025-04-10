@@ -26,6 +26,11 @@ button img, h1{
    height: auto;
 }
 
+.rps-container button {
+    background-color: #F0F0F5;
+    border-color: 1px black solid;
+}
+
 .round-result-container {
     display: flex;
     justify-content: center;
