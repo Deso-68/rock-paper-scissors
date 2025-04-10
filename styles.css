@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     padding: 2vw;
     background-color: #E6E6FA;
+    font-family: 'Dancing Script';
 }
 
 .heading {
@@ -37,6 +38,10 @@ button img, h1{
     align-items: center;
     width: 100%;
     flex-direction: column;
+}
+
+.score-container {
+    font-weight: 500;
 }
 
 .result-info {
