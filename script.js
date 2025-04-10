@@ -18,13 +18,10 @@ const roundResultContainer = document.querySelector(".round-result-container");
 const resultInfo = document.createElement("p");
 resultInfo.classList.add("result-info");
 
-
-// Keep track of the player and computer score
+// Main()
 let humanScore = 0
 let computerScore = 0
 
-
-// Main()
 startGame();
 
 function mainGame(choice) {
